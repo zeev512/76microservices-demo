@@ -1,0 +1,780 @@
+2021-10-29 16:04:58 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-10-29 16:04:58 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication v1.0 using Java 11.0.13 on b3780d810090 with PID 437 (/workspace/BOOT-INF/classes started by root in /workspace)
+2021-10-29 16:04:58 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - The following profiles are active: elastic_query
+2021-10-29 16:04:58 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://config-server:8888
+2021-10-29 16:04:58 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=elastic-query-service,config-client, profiles=[elastic_query], label=null, version=59d1ea42b85e8c60e4da9d5c70398cc030cd6d36, state=null
+2021-10-29 16:04:59 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication v1.0 using Java 11.0.13 on 87b527816775 with PID 438 (/workspace/BOOT-INF/classes started by root in /workspace)
+2021-10-29 16:04:59 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - The following profiles are active: elastic_query
+2021-10-29 16:04:59 [main] DEBUG o.s.boot.SpringApplication - Loading source class il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication
+2021-10-29 16:04:59 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-10-29 16:04:59 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-10-29 16:04:59 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+2021-10-29 16:04:59 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2021-10-29 16:04:59 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2021-10-29 16:04:59 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2021-10-29 16:04:59 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2021-10-29 16:04:59 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication.main(ElasticQueryServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 21 common frames omitted
+2021-10-29 16:04:59 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2021-10-29 16:04:59 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2021-10-29 16:04:59 [main] DEBUG o.s.c.b.b.BindingSpecificEnvironmentPostProcessor - No Kubernetes Service Bindings found. Skipping Environment post-processing.
+2021-10-29 16:04:59 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://config-server:8888
+2021-10-29 16:04:59 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=elastic-query-service,config-client, profiles=[elastic_query], label=null, version=59d1ea42b85e8c60e4da9d5c70398cc030cd6d36, state=null
+2021-10-29 16:04:59 [main] DEBUG o.s.b.c.config.ConfigDataLoader - Environment elastic-query-service,config-client has 2 property sources with 15 properties.
+2021-10-29 16:04:59 [main] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@33db72bd
+2021-10-29 16:04:59 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2021-10-29 16:04:59 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2021-10-29 16:04:59 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2021-10-29 16:04:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/config/WebClientConfig.class]
+2021-10-29 16:04:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/config/WebSecurityConfig.class]
+2021-10-29 16:04:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/model/ElasticQueryServiceResponseModelAssembler.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/rest/ElasticDocumentController.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/rest/ElasticQueryServiceErrorHandler.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/AudienceValidator.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/QueryServicePermissionEvaluator.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/TwitterQueryUserDetailsService.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/service/impl/TwitterElasticQueryService.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/service/impl/TwitterQueryUserService.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/transformer/UserPermissionsToUserDetailTransformer.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-service-common-1.0.jar!/il/co/migdal/ins/elastic/query/service/common/rest/ElasticQueryServiceErrorHandler.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-service-common-1.0.jar!/il/co/migdal/ins/elastic/query/service/common/transformer/ElasticToResponseModelTransformer.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/UserConfigData.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaProducerConfigData.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryConfigData.class]
+2021-10-29 16:05:00 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/AnalyticsServiceConfigData.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryServiceConfigData.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaStreamsServiceConfigData.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/TwitterToKafkaServiceConfigData.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaConfigData.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/RetryConfigData.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryWebClientConfigData.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/GatewayServiceConfigData.class]
+2021-10-29 16:05:00 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2021-10-29 16:05:00 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2021-10-29 16:05:00 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2021-10-29 16:05:00 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2021-10-29 16:05:00 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticConfigData.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaConsumerConfigData.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaStreamsConfigData.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-config-1.0.jar!/il/co/migdal/ins/elastic/config/ElasticsearchConfig.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not a concrete top-level class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/repository/TwitterElasticsearchQueryRepository.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/service/impl/TwitterElasticQueryClient.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/service/impl/TwitterElasticRepositoryQueryClient.class]
+2021-10-29 16:05:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/util/ElasticQueryUtil.class]
+2021-10-29 16:05:00 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+2021-10-29 16:05:00 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication.main(ElasticQueryServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 21 common frames omitted
+2021-10-29 17:30:33 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-10-29 17:30:33 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication v1.0 using Java 11.0.13 on 4c8e42d7e5a1 with PID 438 (/workspace/BOOT-INF/classes started by root in /workspace)
+2021-10-29 17:30:33 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - The following profiles are active: elastic_query
+2021-10-29 17:30:33 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://config-server:8888
+2021-10-29 17:30:33 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=elastic-query-service,config-client, profiles=[elastic_query], label=null, version=59d1ea42b85e8c60e4da9d5c70398cc030cd6d36, state=null
+2021-10-29 17:30:33 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+2021-10-29 17:30:33 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication.main(ElasticQueryServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 21 common frames omitted
+2021-10-29 17:30:37 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication v1.0 using Java 11.0.13 on dee34f539a9c with PID 439 (/workspace/BOOT-INF/classes started by root in /workspace)
+2021-10-29 17:30:37 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - The following profiles are active: elastic_query
+2021-10-29 17:30:37 [main] DEBUG o.s.boot.SpringApplication - Loading source class il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication
+2021-10-29 17:30:37 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-10-29 17:30:37 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-10-29 17:30:37 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2021-10-29 17:30:37 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2021-10-29 17:30:37 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2021-10-29 17:30:37 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2021-10-29 17:30:37 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2021-10-29 17:30:37 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2021-10-29 17:30:37 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2021-10-29 17:30:37 [main] DEBUG o.s.c.b.b.BindingSpecificEnvironmentPostProcessor - No Kubernetes Service Bindings found. Skipping Environment post-processing.
+2021-10-29 17:30:37 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://config-server:8888
+2021-10-29 17:30:37 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=elastic-query-service,config-client, profiles=[elastic_query], label=null, version=59d1ea42b85e8c60e4da9d5c70398cc030cd6d36, state=null
+2021-10-29 17:30:37 [main] DEBUG o.s.b.c.config.ConfigDataLoader - Environment elastic-query-service,config-client has 2 property sources with 15 properties.
+2021-10-29 17:30:37 [main] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6da9dc6
+2021-10-29 17:30:37 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2021-10-29 17:30:37 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2021-10-29 17:30:37 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/config/WebClientConfig.class]
+2021-10-29 17:30:37 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2021-10-29 17:30:37 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2021-10-29 17:30:37 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2021-10-29 17:30:37 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2021-10-29 17:30:37 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/config/WebSecurityConfig.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/model/ElasticQueryServiceResponseModelAssembler.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/rest/ElasticDocumentController.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/rest/ElasticQueryServiceErrorHandler.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/AudienceValidator.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/QueryServicePermissionEvaluator.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/TwitterQueryUserDetailsService.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/service/impl/TwitterElasticQueryService.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/service/impl/TwitterQueryUserService.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/transformer/UserPermissionsToUserDetailTransformer.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-service-common-1.0.jar!/il/co/migdal/ins/elastic/query/service/common/rest/ElasticQueryServiceErrorHandler.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-service-common-1.0.jar!/il/co/migdal/ins/elastic/query/service/common/transformer/ElasticToResponseModelTransformer.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/UserConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaProducerConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/AnalyticsServiceConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryServiceConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaStreamsServiceConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/TwitterToKafkaServiceConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/RetryConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryWebClientConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/GatewayServiceConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaConsumerConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaStreamsConfigData.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-config-1.0.jar!/il/co/migdal/ins/elastic/config/ElasticsearchConfig.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not a concrete top-level class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/repository/TwitterElasticsearchQueryRepository.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/service/impl/TwitterElasticQueryClient.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/service/impl/TwitterElasticRepositoryQueryClient.class]
+2021-10-29 17:30:37 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/util/ElasticQueryUtil.class]
+2021-10-29 17:30:37 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+2021-10-29 17:30:38 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication.main(ElasticQueryServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 21 common frames omitted
+2021-10-29 17:45:59 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication v1.0 using Java 11.0.13 on 6793056e6a69 with PID 438 (/workspace/BOOT-INF/classes started by root in /workspace)
+2021-10-29 17:46:00 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - The following profiles are active: elastic_query
+2021-10-29 17:46:00 [main] DEBUG o.s.boot.SpringApplication - Loading source class il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication
+2021-10-29 17:46:00 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-10-29 17:46:00 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-10-29 17:46:00 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2021-10-29 17:46:00 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2021-10-29 17:46:00 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2021-10-29 17:46:00 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2021-10-29 17:46:00 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2021-10-29 17:46:00 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2021-10-29 17:46:00 [main] DEBUG o.s.c.b.b.BindingSpecificEnvironmentPostProcessor - No Kubernetes Service Bindings found. Skipping Environment post-processing.
+2021-10-29 17:46:00 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://config-server:8888
+2021-10-29 17:46:00 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=elastic-query-service,config-client, profiles=[elastic_query], label=null, version=59d1ea42b85e8c60e4da9d5c70398cc030cd6d36, state=null
+2021-10-29 17:46:00 [main] DEBUG o.s.b.c.config.ConfigDataLoader - Environment elastic-query-service,config-client has 2 property sources with 15 properties.
+2021-10-29 17:46:00 [main] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3971f0fe
+2021-10-29 17:46:00 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2021-10-29 17:46:00 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2021-10-29 17:46:00 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/config/WebClientConfig.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/config/WebSecurityConfig.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/model/ElasticQueryServiceResponseModelAssembler.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/rest/ElasticDocumentController.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/rest/ElasticQueryServiceErrorHandler.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/AudienceValidator.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/QueryServicePermissionEvaluator.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/TwitterQueryUserDetailsService.class]
+2021-10-29 17:46:00 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/service/impl/TwitterElasticQueryService.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/service/impl/TwitterQueryUserService.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/transformer/UserPermissionsToUserDetailTransformer.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-service-common-1.0.jar!/il/co/migdal/ins/elastic/query/service/common/rest/ElasticQueryServiceErrorHandler.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-service-common-1.0.jar!/il/co/migdal/ins/elastic/query/service/common/transformer/ElasticToResponseModelTransformer.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/UserConfigData.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaProducerConfigData.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryConfigData.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/AnalyticsServiceConfigData.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryServiceConfigData.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaStreamsServiceConfigData.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/TwitterToKafkaServiceConfigData.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaConfigData.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/RetryConfigData.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryWebClientConfigData.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/GatewayServiceConfigData.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticConfigData.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaConsumerConfigData.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaStreamsConfigData.class]
+2021-10-29 17:46:00 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2021-10-29 17:46:00 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2021-10-29 17:46:00 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2021-10-29 17:46:00 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2021-10-29 17:46:00 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-config-1.0.jar!/il/co/migdal/ins/elastic/config/ElasticsearchConfig.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not a concrete top-level class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/repository/TwitterElasticsearchQueryRepository.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/service/impl/TwitterElasticQueryClient.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/service/impl/TwitterElasticRepositoryQueryClient.class]
+2021-10-29 17:46:00 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/util/ElasticQueryUtil.class]
+2021-10-29 17:46:00 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+2021-10-29 17:46:00 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication.main(ElasticQueryServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 21 common frames omitted
+2021-10-29 17:46:03 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-10-29 17:46:03 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication v1.0 using Java 11.0.13 on a50085de90a4 with PID 439 (/workspace/BOOT-INF/classes started by root in /workspace)
+2021-10-29 17:46:03 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - The following profiles are active: elastic_query
+2021-10-29 17:46:03 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://config-server:8888
+2021-10-29 17:46:03 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=elastic-query-service,config-client, profiles=[elastic_query], label=null, version=59d1ea42b85e8c60e4da9d5c70398cc030cd6d36, state=null
+2021-10-29 17:46:03 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+2021-10-29 17:46:03 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication.main(ElasticQueryServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 21 common frames omitted
+2021-10-29 17:57:58 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-10-29 17:57:58 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-10-29 17:57:58 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2021-10-29 17:57:58 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2021-10-29 17:57:58 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2021-10-29 17:57:58 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2021-10-29 17:57:58 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication v1.0 using Java 11.0.13 on ba808831379c with PID 438 (/workspace/BOOT-INF/classes started by root in /workspace)
+2021-10-29 17:57:58 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - The following profiles are active: elastic_query
+2021-10-29 17:57:58 [main] DEBUG o.s.boot.SpringApplication - Loading source class il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication
+2021-10-29 17:57:58 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2021-10-29 17:57:58 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2021-10-29 17:57:58 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2021-10-29 17:57:58 [main] DEBUG o.s.c.b.b.BindingSpecificEnvironmentPostProcessor - No Kubernetes Service Bindings found. Skipping Environment post-processing.
+2021-10-29 17:57:58 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://config-server:8888
+2021-10-29 17:57:58 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=elastic-query-service,config-client, profiles=[elastic_query], label=null, version=59d1ea42b85e8c60e4da9d5c70398cc030cd6d36, state=null
+2021-10-29 17:57:58 [main] DEBUG o.s.b.c.config.ConfigDataLoader - Environment elastic-query-service,config-client has 2 property sources with 15 properties.
+2021-10-29 17:57:58 [main] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7fd69dd
+2021-10-29 17:57:58 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2021-10-29 17:57:58 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2021-10-29 17:57:58 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication v1.0 using Java 11.0.13 on 8af9a22e6092 with PID 438 (/workspace/BOOT-INF/classes started by root in /workspace)
+2021-10-29 17:57:58 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - The following profiles are active: elastic_query
+2021-10-29 17:57:58 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-10-29 17:57:58 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://config-server:8888
+2021-10-29 17:57:58 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=elastic-query-service,config-client, profiles=[elastic_query], label=null, version=59d1ea42b85e8c60e4da9d5c70398cc030cd6d36, state=null
+2021-10-29 17:57:58 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/config/WebClientConfig.class]
+2021-10-29 17:57:58 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/config/WebSecurityConfig.class]
+2021-10-29 17:57:58 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/model/ElasticQueryServiceResponseModelAssembler.class]
+2021-10-29 17:57:59 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2021-10-29 17:57:59 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2021-10-29 17:57:59 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2021-10-29 17:57:59 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2021-10-29 17:57:59 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2021-10-29 17:57:59 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/rest/ElasticDocumentController.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/rest/ElasticQueryServiceErrorHandler.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/AudienceValidator.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/QueryServicePermissionEvaluator.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/TwitterQueryUserDetailsService.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/service/impl/TwitterElasticQueryService.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/service/impl/TwitterQueryUserService.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/transformer/UserPermissionsToUserDetailTransformer.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-service-common-1.0.jar!/il/co/migdal/ins/elastic/query/service/common/rest/ElasticQueryServiceErrorHandler.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-service-common-1.0.jar!/il/co/migdal/ins/elastic/query/service/common/transformer/ElasticToResponseModelTransformer.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/UserConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaProducerConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/AnalyticsServiceConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryServiceConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaStreamsServiceConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/TwitterToKafkaServiceConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/RetryConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryWebClientConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/GatewayServiceConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaConsumerConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaStreamsConfigData.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-config-1.0.jar!/il/co/migdal/ins/elastic/config/ElasticsearchConfig.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not a concrete top-level class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/repository/TwitterElasticsearchQueryRepository.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/service/impl/TwitterElasticQueryClient.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/service/impl/TwitterElasticRepositoryQueryClient.class]
+2021-10-29 17:57:59 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/util/ElasticQueryUtil.class]
+2021-10-29 17:57:59 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+2021-10-29 17:57:59 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication.main(ElasticQueryServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 21 common frames omitted
+2021-10-29 17:57:59 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+2021-10-29 17:57:59 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication.main(ElasticQueryServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 21 common frames omitted
+2021-10-29 18:22:24 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-10-29 18:22:24 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-10-29 18:22:24 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2021-10-29 18:22:24 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2021-10-29 18:22:24 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2021-10-29 18:22:24 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2021-10-29 18:22:24 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication v1.0 using Java 11.0.13 on 1b617875bb45 with PID 437 (/workspace/BOOT-INF/classes started by root in /workspace)
+2021-10-29 18:22:24 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - The following profiles are active: elastic_query
+2021-10-29 18:22:24 [main] DEBUG o.s.boot.SpringApplication - Loading source class il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication
+2021-10-29 18:22:24 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2021-10-29 18:22:24 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2021-10-29 18:22:24 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2021-10-29 18:22:25 [main] DEBUG o.s.c.b.b.BindingSpecificEnvironmentPostProcessor - No Kubernetes Service Bindings found. Skipping Environment post-processing.
+2021-10-29 18:22:25 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://config-server:8888
+2021-10-29 18:22:25 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=elastic-query-service,config-client, profiles=[elastic_query], label=null, version=59d1ea42b85e8c60e4da9d5c70398cc030cd6d36, state=null
+2021-10-29 18:22:25 [main] DEBUG o.s.b.c.config.ConfigDataLoader - Environment elastic-query-service,config-client has 2 property sources with 15 properties.
+2021-10-29 18:22:25 [main] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4beeb0e
+2021-10-29 18:22:25 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2021-10-29 18:22:25 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2021-10-29 18:22:25 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/config/WebClientConfig.class]
+2021-10-29 18:22:25 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2021-10-29 18:22:25 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2021-10-29 18:22:25 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2021-10-29 18:22:25 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2021-10-29 18:22:25 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/config/WebSecurityConfig.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/model/ElasticQueryServiceResponseModelAssembler.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/rest/ElasticDocumentController.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/rest/ElasticQueryServiceErrorHandler.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/AudienceValidator.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/QueryServicePermissionEvaluator.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/TwitterQueryUserDetailsService.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/service/impl/TwitterElasticQueryService.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/service/impl/TwitterQueryUserService.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/transformer/UserPermissionsToUserDetailTransformer.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-service-common-1.0.jar!/il/co/migdal/ins/elastic/query/service/common/rest/ElasticQueryServiceErrorHandler.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-service-common-1.0.jar!/il/co/migdal/ins/elastic/query/service/common/transformer/ElasticToResponseModelTransformer.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/UserConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaProducerConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/AnalyticsServiceConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryServiceConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaStreamsServiceConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/TwitterToKafkaServiceConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/RetryConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryWebClientConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/GatewayServiceConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaConsumerConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaStreamsConfigData.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-config-1.0.jar!/il/co/migdal/ins/elastic/config/ElasticsearchConfig.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not a concrete top-level class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/repository/TwitterElasticsearchQueryRepository.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/service/impl/TwitterElasticQueryClient.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/service/impl/TwitterElasticRepositoryQueryClient.class]
+2021-10-29 18:22:25 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/util/ElasticQueryUtil.class]
+2021-10-29 18:22:25 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+2021-10-29 18:22:25 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication.main(ElasticQueryServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 21 common frames omitted
+2021-10-29 18:22:26 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication v1.0 using Java 11.0.13 on 2bcd37acd594 with PID 437 (/workspace/BOOT-INF/classes started by root in /workspace)
+2021-10-29 18:22:26 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - The following profiles are active: elastic_query
+2021-10-29 18:22:26 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-10-29 18:22:26 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://config-server:8888
+2021-10-29 18:22:26 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=elastic-query-service,config-client, profiles=[elastic_query], label=null, version=59d1ea42b85e8c60e4da9d5c70398cc030cd6d36, state=null
+2021-10-29 18:22:26 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+2021-10-29 18:22:26 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication.main(ElasticQueryServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 21 common frames omitted
+2021-10-29 18:36:32 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication v1.0 using Java 11.0.13 on d80ba623cee2 with PID 438 (/workspace/BOOT-INF/classes started by root in /workspace)
+2021-10-29 18:36:32 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-10-29 18:36:32 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-10-29 18:36:32 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - The following profiles are active: elastic_query
+2021-10-29 18:36:32 [main] DEBUG o.s.boot.SpringApplication - Loading source class il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication
+2021-10-29 18:36:32 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2021-10-29 18:36:32 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2021-10-29 18:36:32 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2021-10-29 18:36:32 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2021-10-29 18:36:33 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2021-10-29 18:36:33 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2021-10-29 18:36:33 [main] DEBUG o.s.c.b.b.BindingSpecificEnvironmentPostProcessor - No Kubernetes Service Bindings found. Skipping Environment post-processing.
+2021-10-29 18:36:33 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://config-server:8888
+2021-10-29 18:36:33 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=elastic-query-service,config-client, profiles=[elastic_query], label=null, version=59d1ea42b85e8c60e4da9d5c70398cc030cd6d36, state=null
+2021-10-29 18:36:33 [main] DEBUG o.s.b.c.config.ConfigDataLoader - Environment elastic-query-service,config-client has 2 property sources with 15 properties.
+2021-10-29 18:36:33 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2021-10-29 18:36:33 [main] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3971f0fe
+2021-10-29 18:36:33 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2021-10-29 18:36:33 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/config/WebClientConfig.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/config/WebSecurityConfig.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/model/ElasticQueryServiceResponseModelAssembler.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/rest/ElasticDocumentController.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/rest/ElasticQueryServiceErrorHandler.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/AudienceValidator.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/QueryServicePermissionEvaluator.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/security/TwitterQueryUserDetailsService.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/service/impl/TwitterElasticQueryService.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/service/impl/TwitterQueryUserService.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/workspace/BOOT-INF/classes/il/co/migdal/ins/elastic/query/transformer/UserPermissionsToUserDetailTransformer.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-service-common-1.0.jar!/il/co/migdal/ins/elastic/query/service/common/rest/ElasticQueryServiceErrorHandler.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-service-common-1.0.jar!/il/co/migdal/ins/elastic/query/service/common/transformer/ElasticToResponseModelTransformer.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/UserConfigData.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaProducerConfigData.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryConfigData.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/AnalyticsServiceConfigData.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryServiceConfigData.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaStreamsServiceConfigData.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/TwitterToKafkaServiceConfigData.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaConfigData.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/RetryConfigData.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticQueryWebClientConfigData.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/GatewayServiceConfigData.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/ElasticConfigData.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaConsumerConfigData.class]
+2021-10-29 18:36:33 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/app-config-data-1.0.jar!/il/co/migdal/ins/kafka/config/KafkaStreamsConfigData.class]
+2021-10-29 18:36:33 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2021-10-29 18:36:33 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2021-10-29 18:36:33 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2021-10-29 18:36:33 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2021-10-29 18:36:33 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-config-1.0.jar!/il/co/migdal/ins/elastic/config/ElasticsearchConfig.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not a concrete top-level class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/repository/TwitterElasticsearchQueryRepository.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/service/impl/TwitterElasticQueryClient.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/service/impl/TwitterElasticRepositoryQueryClient.class]
+2021-10-29 18:36:33 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: URL [jar:file:/workspace/BOOT-INF/lib/elastic-query-client-1.0.jar!/il/co/migdal/ins/elastic/query/client/util/ElasticQueryUtil.class]
+2021-10-29 18:36:33 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+2021-10-29 18:36:33 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication.main(ElasticQueryServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 21 common frames omitted
+2021-10-29 18:36:35 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-10-29 18:36:35 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication v1.0 using Java 11.0.13 on 95d46c2188af with PID 438 (/workspace/BOOT-INF/classes started by root in /workspace)
+2021-10-29 18:36:35 [main] INFO  i.c.m.i.e.q.s.ElasticQueryServiceApplication - The following profiles are active: elastic_query
+2021-10-29 18:36:35 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://config-server:8888
+2021-10-29 18:36:35 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=elastic-query-service,config-client, profiles=[elastic_query], label=null, version=59d1ea42b85e8c60e4da9d5c70398cc030cd6d36, state=null
+2021-10-29 18:36:35 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+2021-10-29 18:36:35 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at il.co.migdal.ins.elastic.query.service.ElasticQueryServiceApplication.main(ElasticQueryServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'elasticQueryServiceErrorHandler' for bean class [il.co.migdal.ins.elastic.query.service.common.rest.ElasticQueryServiceErrorHandler] conflicts with existing, non-compatible bean definition of same name and class [il.co.migdal.ins.elastic.query.rest.ElasticQueryServiceErrorHandler]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 21 common frames omitted
