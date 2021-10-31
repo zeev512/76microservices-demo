@@ -28,7 +28,7 @@ volumes:
 
 services:
   postgres:
-    image: postgres:14
+    image: postgres
     restart: always
     volumes:
       - postgres_data:/var/lib/postgresql/data
