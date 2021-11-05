@@ -7,7 +7,9 @@ CREATE TABLE analytics.twitter_analytics (
     CONSTRAINT twitter_anaytics_pkey PRIMARY KEY(id)
 )
 TABLESPACE pg_default;
-ALTER TABLE analytics.twitter_analytics OWNER to postgres;
+--
+-- ALTER TABLE analytics.twitter_analytics OWNER to postgres;
+--
 CREATE INDEX "WORD_BY_DATE" ON analytics.twitter_analytics USING btree
  (
    word COLLATE pg_catalog."default" ASC NULLS LAST,
